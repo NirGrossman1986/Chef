@@ -1,0 +1,6 @@
+#!/bin/bash
+ if AWS_ACCESS_KEY_ID=<%=node["consul-mysql-npm"]["attr1"]["access_key"] %> AWS_SECRET_ACCESS_KEY=<%=node["consul-mysql-npm"]["attr1"]["secret_key"] %> sudo aws s3 cp s3://workshop-tf-state-nirg/ChuckNorrisAPP/  ~/project/ChuckNorrisAPP --recursive<%=node["consul-mysql-npm"]["attr1"]["name"] %>.tar.gz Unofficial-Chevrolet-Auto-shop-<%=node["consul-mysql-npm"]["attr1"]["name"] %>
+  echo "Downloaded file:  Unofficial-Chevrolet-Auto-shop-<%=node["consul-mysql-npm"]["attr1"]["name"] %>"
+ else
+  echo "Failed to Download file: ChuckNorrisAPP"
+ fi
