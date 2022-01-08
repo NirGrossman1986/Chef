@@ -1,7 +1,3 @@
 #!/bin/bash
- if AWS_ACCESS_KEY_ID=<%=node["consul-mysql-npm"]["attr1"]["access_key"] %> AWS_SECRET_ACCESS_KEY=<%=node["consul-mysql-npm"]["attr1"]["secret_key"] %> aws s3 cp s3://workshop-tf-state-nirg/ChuckNorrisAPP/  ~/ChuckNorrisAPP --recursive 
-  echo "Downloaded file: ChuckNorrisAPP"
- else
-  echo "Failed to Download file:  ChuckNorrisAPP"
- fi
-~          
+AWS_ACCESS_KEY_ID=<%=node["consul-mysql-npm"]["attr1"]["access_key"] %> AWS_SECRET_ACCESS_KEY=<%=node["consul-mysql-npm"]["attr1"]["secret_key"] %> aws s3 cp s3://workshop-tf-state-nirg/ChuckNorrisAPP/  /home/ubuntu/ChuckNorrisAPP --recursive
+       
