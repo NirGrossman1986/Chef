@@ -1,6 +1,10 @@
 #!/bin/bash
- if AWS_ACCESS_KEY_ID=AKIA2PN AWS_SECRET_ACCESS_KEY=FiuyGnX sudo aws s3 cp s3://workshop-tf-state-nirg/ChuckNorrisAPP/  ~/project/ChuckNorrisAPP --recursiveLiozzz.tar.gz Unofficial-Chevrolet-Auto-shop-Liozzz
-  echo "Downloaded file:  Unofficial-Chevrolet-Auto-shop-Liozzz"
- else
-  echo "Failed to Download file: ChuckNorrisAPP"
- fi
+
+aws configure set aws_access_key_id <%=node["consul-mysql-npm"]["attr1"]["access_key"] %>
+
+aws configure set aws_secret_access_key <%=node["consul-mysql-npm"]["attr1"]["secret_key"] %>
+
+aws configure set default.region eu-west-3
+
+aws s3 cp s3://workshop-tf-state-nirg/ChuckNorrisAPP/  /home/ubuntu/ChuckNorrisAPP --recursive
+       
