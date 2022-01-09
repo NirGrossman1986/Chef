@@ -1,3 +1,10 @@
 #!/bin/bash
-AWS_ACCESS_KEY_ID=<%=node["consul-mysql-npm"]["attr1"]["access_key"] %> AWS_SECRET_ACCESS_KEY=<%=node["consul-mysql-npm"]["attr1"]["secret_key"] %> aws s3 cp s3://workshop-tf-state-nirg/ChuckNorrisAPP/  /home/ubuntu/ChuckNorrisAPP --recursive
+
+aws configure set aws_access_key_id <%=node["consul-mysql-npm"]["attr1"]["access_key"] %>
+
+aws configure set aws_secret_access_key <%=node["consul-mysql-npm"]["attr1"]["secret_key"] %>
+
+aws configure set default.region eu-west-3
+
+aws s3 cp s3://workshop-tf-state-nirg/ChuckNorrisAPP/  /home/ubuntu/ChuckNorrisAPP --recursive
        
