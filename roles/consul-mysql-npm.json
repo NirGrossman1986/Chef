@@ -4,7 +4,7 @@
      "consul-mysql-npm": {
        "version": "Vers.erb",
        "attr1": {
-         "name": "Liozzz",
+         "name": "Test",
          "access_key": "AKIA2PN",
          "secret_key": "FiuyGnX"
        }
