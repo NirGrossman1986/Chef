@@ -46,7 +46,5 @@ bash 'run myApp-installation.sh, npm install and start' do
    cwd '/home/'
    code <<-EOH
      sh /home/Chef/script/myApp-installation.sh > /home/logs/myApp.log
-     cd /home/Unofficial-Chevrolet-Auto-shop && npm install >> /home/logs/myApp.log
-     cd /home/Unofficial-Chevrolet-Auto-shop && node server.js & >> /home/logs/myApp.log
    EOH
 end
