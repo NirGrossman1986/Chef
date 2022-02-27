@@ -9,14 +9,6 @@ end
 package 'awscli' do
   action :install
 end
- 
-# Node.js binary distributions are available from NodeSource
-# for Debian and Ubuntu based Linux distributions
-# maybe i need to find another way ??
-execute "Node.js binary" do
-  command "curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash - && sudo apt-get install -y nodejs"
-  not_if "node -v | grep 14"
-end
 
 # Install Consul agent and Run as a system service
 execute "install consul" do
